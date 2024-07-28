@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>增强型标签页侧边栏</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        #urlBar {
+            padding: 10px;
+            background-color: #f0f0f0;
+        }
+        #navigationControls {
+            display: flex;
+            justify-content: space-around;
+            padding: 5px;
+            background-color: #e0e0e0;
+        }
+        #tabList {
+            flex-grow: 1;
+            overflow-y: auto;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        #tabList li {
+            padding: 8px;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+        }
+        #tabList li:hover {
+            background-color: #f0f0f0;
+        }
+        #bookmarks {
+            max-height: 30%;
+            overflow-y: auto;
+            background-color: #f0f0f0;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="urlBar">
+        <input type="text" id="urlInput" style="width: 100%;">
+    </div>
+    <div id="navigationControls">
+        <button id="backBtn">后退</button>
+        <button id="forwardBtn">前进</button>
+        <button id="refreshBtn">刷新</button>
+    </div>
+    <ul id="tabList"></ul>
+    <div id="bookmarks">
+        <h3>收藏夹</h3>
+        <ul id="bookmarkList"></ul>
+    </div>
+    <script src="sidepanel.js"></script>
+</body>
+</html>

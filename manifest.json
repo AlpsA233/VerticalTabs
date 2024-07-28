@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "标签页侧边栏",
+  "version": "1.0",
+  "description": "在Chrome侧边栏展示和管理标签页",
+  "permissions": [
+    "tabs",
+    "sidePanel",
+    "fullscreen",
+    "bookmarks"
+  ],
+  "action": {
+    "default_title": "打开标签页侧边栏"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
